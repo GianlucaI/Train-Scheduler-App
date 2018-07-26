@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <!-- RESET STYLE SHEET -->
+  <link href="reset.css" rel="stylesheet">
+
+
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+
+  <!-- STYLE SHEET -->
+  <link href="style.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+  <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+  <title>TRAIN SCHEDULER</title>
+
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3" style="text-align:center">Anytime is Train Time</h1>
+      <p class="lead" style="text-align:center">Choo Choo. Chee Chee.</p>
+      <hr class="my-2">
+    </div>
+  </div>
+
+  <form>
+
+    <div class="container">
+      <div class="form-title">
+        <h2>Add Train</h2>
+        <br>
+      </div>
+      <div class="form-group">
+        <label for="inputName">Train Name</label>
+        <input type="name" class="form-control" id="inputName" placeholder="Trenton Express">
+      </div>
+      <div class="form-group">
+        <label for="inputDesitnation">Destination</label>
+        <input type="destination" class="form-control" id="inputDestination" placeholder="Trenton">
+      </div>
+      <div class="form-group">
+        <label for="inputStart">First Train Time HH:mm - military time</label>
+        <input type="startDate" class="form-control" id="inputStart" placeholder="14:55">
+      </div>
+      <div class="form-group">
+        <label for="inputFrequency">Frequency (min)</label>
+        <input type="frequency" class="form-control" id="inputFrequency" placeholder="25">
+      </div>
+      <button type="submit" id="addTrain" class="btn btn-primary">Submit</button>
+  </form>
+
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <!-- Current Trains-->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Current Train Schedule</h3>
+          <table class="table table-sm table-hover" id='train-table'>
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Miutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
